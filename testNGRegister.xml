@@ -1,0 +1,14 @@
+<suite name="IRCTC">
+
+    <test name="Register">
+        <classes>
+            <class name="test.RegisterTest">
+                <methods>
+                <Include name="registerBasic"/>
+                <Include name="registerPersonal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
