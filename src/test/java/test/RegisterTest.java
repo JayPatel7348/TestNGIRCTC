@@ -15,14 +15,23 @@ public class RegisterTest {
 
     public WebDriver driver;
     Register rg;
-
     Scroll scrl;
     ScreenShot ss;
+    browserNotificationClose notifyClose;
+
+
+    RegisterTest()  //constructor to initialize the objects
+    {
+        //this.driver=driver;
+        notifyClose = new browserNotificationClose();
+        scrl=new Scroll();
+        ss=new ScreenShot();
+    }
     @BeforeClass
     public void setup()
     {
         // Initialize browser with notifications disabled
-        browserNotificationClose notifyClose = new browserNotificationClose();
+        //browserNotificationClose notifyClose = new browserNotificationClose();
         driver = notifyClose.notificationClose();
 
         // Maximize the window and navigate to the registration page
@@ -51,12 +60,12 @@ public class RegisterTest {
         rg.enterSecurityAnswer("Fluffy");
 
         //scroll
-        scrl=new Scroll(); //object variable define as default at top -> (Scroll scrl)
+        //scrl=new Scroll(); //object variable define as default at top -> (Scroll scrl)
         scrl.scrollWebPage3(driver,92);
         Thread.sleep(1000);
 
         //Take screenshot
-        ss=new ScreenShot();  //object variable define as default at top -> (ScreenShot ss)
+        //ss=new ScreenShot();  //object variable define as default at top -> (ScreenShot ss)
         ss.takeScreenShot(driver);
 
         rg.clickContinue();
