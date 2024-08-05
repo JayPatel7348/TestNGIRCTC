@@ -120,7 +120,7 @@ public class Register {
     @FindBy(xpath = "//select[@formcontrolname='nationality']")
     public WebElement slctNationality;
 
-    @FindBy(xpath = "//option[@value='94'][normalize-space()='India'][1]")
+    @FindBy(xpath = "(//option[@value='94'][normalize-space()='India'])[1]")
     public WebElement slctNationalityIndiaOpt;
 
     @FindBy(xpath = "//button[normalize-space()='Continue']")
